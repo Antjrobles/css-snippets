@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(10, 10, 10);
+  display: grid;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+  place-items: center;
+}
+
+
+
+h1 {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+
+
+h1 > .magic {
+  animation: background-pan 8s linear infinite;
+ /* The first color and the last must be the same to avoid a hard transition */
+  background: linear-gradient(
+    to right,
+    tomato 0%,
+    blue 30%,
+    gold 60%,
+    tomato 100%
+  ); 
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+
+
+
+
+ 
